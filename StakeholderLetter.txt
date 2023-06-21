@@ -1,0 +1,23 @@
+Hi everyone,
+
+I hope this email finds you well. I have completed the data analysis for Fetch Rewards, including the users, brands, and receipts tables, and I would like to share my findings and ask some questions to gain a better understanding of this data.
+
+Here is a summary of what I have accomplished:
+
+1. Imported the information from the JSON file and structured the data into a user-friendly CSV format.
+2.  Created a rewardsList table to record information for each reward item. This approach helps avoid a large receipts table with redundant rows.
+3. Loaded the data into MySQL databases and have been able to answer the predetermined questions.
+
+During the data cleaning process, I encountered several questions and issues:
+
+1. There were six duplicate barcodes, which I highlighted in the Jupyter Notebook. To quickly identify the brand of each item, it is better to use unique barcodes.
+2. Most barcodes from the receipts did not exist in the brands table. This posed a problem when joining these two tables to determine the top five brands. I have doubts about the accuracy of the results and believe further communication is necessary.
+3. The dictionary format for columns such as id and date seemed redundant since they contained only one item. It would be more efficient to store their values directly.
+4.  The current format of the time-related columns is difficult to read for analysis purposes. It would be beneficial to save them in a more recognizable format.
+5. The barcode column in receipts.json is of type float, which can cause confusion when using it as a foreign key. I suggest either using INT or String data type to store it.
+
+I would appreciate scheduling a meeting to discuss these points further if you have the time available.
+
+Thank you and looking forward to our discussion
+Best,
+Yihuan
